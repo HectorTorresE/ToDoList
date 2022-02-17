@@ -1,11 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wbpack Exercise</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDo List</title>
 </head>
+
 <body>
-    <h1>Hello H!</h1>
+  <div class="flex-container">
+    <div class="row">
+      <p>ToDo List</p>
+      <button type="button">&#x2672;</button>
+    </div>
+    <div class="row inputs">
+      <input type="text" placeholder="Add to your list...">
+      <button type="button">&#9166;</button>
+    </div>
+    <template id="ToDo" >
+      <div class="row toDoR" draggable="true">
+        <div class="task">
+          <input type="checkbox" class="checkbox">
+          <input class="toDoName" type="text">
+        </div>
+        <button class='btnMove' type="button">&#8942;</button>
+        <button class='btnRemove' type="button">&#128465;</button>
+      </div>
+    </template>
+    <div class="container">
+    </div>
+    <footer>
+      <button type="button" class="removeCompleted">Clear all completed</button>
+    </footer>
+  </div>
 </body>
+
 </html>

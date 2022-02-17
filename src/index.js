@@ -1,19 +1,7 @@
-import _ from 'lodash';
-import printMe from './print.js';
 import './style.css';
 
- function component() {
-   const element = document.createElement('div');
-  const btn = document.createElement('button');
+import Container from './Container.js';
 
-   element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-
-  btn.innerHTML = 'Click me and check the console!';
-  btn.onclick = printMe;
-
-  element.appendChild(btn);
-
-   return element;
- }
-
- document.body.appendChild(component());
+const List = new Container();
+List.ShowList();
+List.Events();
