@@ -1,3 +1,77 @@
 body {
-  background-color: bisque;
+  background-color: gray;
 }
+
+* {
+  border: 0;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  margin: 30px auto;
+  width: 50%;
+  background-color: white;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  align-items: center;
+}
+
+.row button {
+  background-color: transparent;
+  border: none;
+  font-size: larger;
+}
+
+.toDoName {
+  margin: 10px;
+}
+
+.toDoR.move {
+  border: 2px solid black;
+}
+
+.inputs input {
+  font-family: inherit;
+  background-color: inherit;
+  outline: none;
+  width: 90%;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  flex: 2;
+}
+
+.removeCompleted {
+  padding: 15px;
+  color: darkgray;
+  font-size: 30px;
+  margin: 0 auto;
+  display: block;
+}
+
+.btnMove {
+  cursor: move;
+}
+
+.btnRemove {
+  display: none;
+  cursor: pointer;
+}
+
+
+footer {
+  background-color: #f1efef;
+}
+
+
+.removeCompleted:hover {
+  color: black;
+}
+
