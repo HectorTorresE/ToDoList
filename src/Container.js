@@ -41,17 +41,16 @@ class Container {
           first.querySelector(".btnRemove").dataset.id,
           e.target.checked
         );
-        if (!e.target.checked)
+        if (!e.target.checked){
           first.querySelector(".toDoName").style.textDecoration = "none";
-        else
-          first.querySelector(".toDoName").style.textDecoration =
-            "line-through";
+        } else {
+          first.querySelector(".toDoName").style.textDecoration = "line-through";
+        }
       });
 
       toDoName.addEventListener("blur", (e) => {
         const first = e.target.parentNode.parentNode;
-        const index =
-          e.target.parentNode.parentNode.querySelector(".btnRemove").dataset.id;
+        const index = e.target.parentNode.parentNode.querySelector(".btnRemove").dataset.id;
         this.List.updateTitle(index, e.target.value);
         setTimeout(() => {
           first.querySelector(".btnRemove").style.display = "none";

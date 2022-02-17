@@ -5,7 +5,7 @@ class ToDoList {
       this.ToDo = JSON.parse(localStorage.getItem('ToDoList'));
     }
   }
-  
+
   AddToDO(title) {
     this.ToDo.push({
       index: this.ToDo.length + 1,
@@ -13,9 +13,9 @@ class ToDoList {
       title,
     });
   }
-  
+
   saveList() {
-    window.localStorage.setItem("ToDoList", JSON.stringify(this.ToDo));
+    window.localStorage.setItem('ToDoList', JSON.stringify(this.ToDo));
   }
 
   RemoveToDo(index) {
@@ -45,7 +45,7 @@ class ToDoList {
     this.ToDo[first] = this.ToDo[second];
     this.ToDo[second] = x;
     this.refreshIndex();
-    
+
   }
 
   changeDone(index, status) {
