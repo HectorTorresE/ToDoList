@@ -28,7 +28,6 @@ class ToDoList {
     this.saveList();
   }
 
-
   removeCompleted() {
     this.ToDo = this.ToDo.filter((e) => !e.done);
     this.refreshIndex();
@@ -37,7 +36,7 @@ class ToDoList {
   changeIndex(index1, index2) {
     let first = 0;
     let second = 0;
-    for (let i = 0; i < this.ToDo.length; i++) {
+    for (let i = 0; i < this.ToDo.length; i += 1) {
       if (this.ToDo[i].index === Number(index1)) first = i;
       if (this.ToDo[i].index === Number(index2)) second = i;
     }
@@ -45,7 +44,6 @@ class ToDoList {
     this.ToDo[first] = this.ToDo[second];
     this.ToDo[second] = x;
     this.refreshIndex();
-
   }
 
   changeDone(index, status) {
