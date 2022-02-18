@@ -1,5 +1,5 @@
 # ToDo List
-This project is a simle todo list that alows you to add remove edit and complete task on the list. setup project built with html and css and js
+This project is a to-do list that alows you to add remove edit and complete task on the list. setup project built with html and css and js
 
 ![image](https://user-images.githubusercontent.com/31547587/154532062-1479a41e-5d60-4317-82da-1773b0e58862.png)
 
