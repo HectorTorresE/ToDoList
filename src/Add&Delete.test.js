@@ -1,9 +1,9 @@
-import List from './ToDoList';
+import List from './ToDoList.js';
 import Container from './Container.js';
 
-describe('ToDoList localstorage'), () => {
+describe('ToDoList localstorage', () => {
   test('Delete', () => {
-    const ToDoList = new TaskList();
+    const ToDoList = new List();
     ToDoList.AddToDO('New Task 1');
     ToDoList.AddToDO('New Task 2');
     ToDoList.deleteTask(1);
@@ -15,7 +15,7 @@ describe('ToDoList localstorage'), () => {
     ToDoList.AddToDO('New event 2');
     expect(ToDoList.ToDo.length).toBe(2);
   });
-};
+});
 
 describe('DOM manipulation', () => {
   test('Add item', () => {
@@ -62,7 +62,7 @@ describe('DOM manipulation', () => {
     List.ToDoList.AddToDO('event 1');
     List.ToDoList.RemoveToDo(0);
     List.ShowList();
-    const tasks = document.body.querySelectorAll('.toDoR')
+    const tasks = document.body.querySelectorAll('.toDoR');
     expect(tasks.length).toBe(1);
   });
 });
