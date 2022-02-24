@@ -15,7 +15,7 @@ class ToDoList {
   }
 
   saveList() {
-    window.localStorage.setItem('ToDoList', JSON.stringify(this.ToDo));
+    localStorage.setItem('ToDoList', JSON.stringify(this.ToDo));
   }
 
   RemoveToDo(index) {

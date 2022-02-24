@@ -4,7 +4,7 @@
   "description": "",
   "private": "true",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --verbose",
     "start": "webpack serve --open",
     "build": "webpack"
   },
@@ -20,6 +20,9 @@
   },
   "homepage": "https://github.com/HectorTorresE/WebPack-SetUp#readme",
   "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "babel-loader": "^8.2.3",
     "css-loader": "^6.6.0",
     "html-webpack-plugin": "^5.5.0",
     "jest": "^27.5.1",
