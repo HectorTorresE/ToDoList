@@ -23,7 +23,7 @@ describe('ToDoList localstorage', () => {
 });
 
 describe('DOM manipulation', () => {
-  test('Add T\to-do', () => {
+  test('Add to-do', () => {
     window.localStorage.clear();
     document.body.innerHTML = `
     <template id='ToDo' >
@@ -71,5 +71,32 @@ describe('DOM manipulation', () => {
     cont.ShowList();
     const tasks = document.body.querySelectorAll('.toDoR');
     expect(tasks.length).toBe(2);
+  });
+});
+
+describe('Test update title, clear all, and completed of to-do', () => {
+  test('completed', () => {
+    window.localStorage.clear();
+    const ToDoList = new List();
+    ToDoList.AddToDO('event');
+    ToDoList.changeDone(1, true);
+    expect(ToDoList.ToDo[0].done).toBeTruthy();
+  });
+  test('update title', () => {
+    window.localStorage.clear();
+    const ToDoList = new List();
+    ToDoList.AddToDO('event');
+    ToDoList.updateTitle(1, 'event 1');
+    expect(ToDoList.ToDo[0].title).toBe('event 1');
+  });
+  test('Clear all', () => {
+    window.localStorage.clear();
+    const ToDoList = new List();
+    ToDoList.AddToDO('event');
+    ToDoList.AddToDO('event 1');
+    ToDoList.changeDone(1, true);
+    ToDoList.removeCompleted();
+    const size = ToDoList.ToDo.length;
+    expect(size).toBe(1);
   });
 });
